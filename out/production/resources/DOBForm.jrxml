@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="employeeReport"
+              pageWidth="700"
+              pageHeight="1100"
+              leftMargin="40"
+              rightMargin="40"
+              topMargin="10"
+              bottomMargin="20">
+
+    <parameter name="title" isForPrompting="false"/>
+    <parameter name="lastName"> </parameter>
+    <parameter name="testingParameter"/>
+    <parameter name="employee" class="com.fabiankevin.jasper.Employee"></parameter>
+
+    <detail>
+        <band splitType="Stretch" height="700">
+
+            <subreport>
+                <reportElement x="0" y="0" width="620" height="50"/>
+                <subreportParameter name="employee">
+                    <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
+                </subreportParameter>
+                <subreportExpression class="java.lang.String">
+                    "1-header.jasper"</subreportExpression>
+            </subreport>
+
+            <subreport>
+                <reportElement x="0" y="60" width="620" height="50"/>
+                <subreportParameter name="employee">
+                    <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
+                </subreportParameter>
+
+                <subreportExpression class="java.lang.String">
+                    "2-account-details.jasper"</subreportExpression>
+            </subreport>
+
+
+            <subreport>
+                <reportElement x="0" y="100" width="620" height="50"/>
+                <subreportParameter name="employee">
+                    <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
+                </subreportParameter>
+
+                <subreportExpression class="java.lang.String">
+                    "3-person-details.jasper"</subreportExpression>
+            </subreport>
+
+            <subreport>
+                <reportElement x="0" y="200" width="620" height="50"/>
+                <subreportParameter name="employee">
+                    <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
+                </subreportParameter>
+
+                <subreportExpression class="java.lang.String">
+                    "4-address.jasper"</subreportExpression>
+            </subreport>
+
+            <subreport>
+                <reportElement x="0" y="280" width="620" height="50"/>
+                <subreportParameter name="employee">
+                    <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
+                </subreportParameter>
+
+                <subreportExpression class="java.lang.String">
+                    "5-other-details.jasper"</subreportExpression>
+            </subreport>
+
+            <subreport>
+                <reportElement x="0" y="400" width="620" height="50"/>
+                <subreportParameter name="employee">
+                    <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
+                </subreportParameter>
+
+                <subreportExpression class="java.lang.String">
+                    "6-fatca-info.jasper"</subreportExpression>
+            </subreport>
+
+            <subreport>
+                <reportElement x="0" y="480" width="620" height="50"/>
+                <subreportParameter name="employee">
+                    <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
+                </subreportParameter>
+
+                <subreportExpression class="java.lang.String">
+                    "7-certification.jasper"</subreportExpression>
+            </subreport>
+
+
+        </band>
+    </detail>
+</jasperReport>

@@ -1,38 +1,55 @@
 package com.fabiankevin.jasper;
 
-import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperExportManager;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
-import net.sf.jasperreports.engine.design.JasperDesign;
-import net.sf.jasperreports.engine.xml.JRXmlLoader;
 
-import java.io.InputStream;
 import java.util.*;
 
 public class App {
 
     public static void main(String[] args) {
         try {
-//
+////
         SimpleReportFiller simpleReportFiller = new SimpleReportFiller();
-
         SimpleReportExporter simpleReportExporter = new SimpleReportExporter();
 
-//
-//        simpleReportFiller.setReportFileName("employeeEmailReport.jrxml");
-//        simpleReportFiller.compileReport();
-//
-        simpleReportFiller.setReportFileName("employee.jrxml");
+        Employee employee = new Employee();
+        employee.setId(1l);
+        employee.setSalary(2000.25);
+        employee.setLastName("FABIAN");
+        employee.setFirstName("KEVIN");
+
+
+            simpleReportFiller.setReportFileName("1-header.jrxml");
+            simpleReportFiller.compileReport();
+
+            simpleReportFiller.setReportFileName("2-account-details.jrxml");
+            simpleReportFiller.compileReport();
+
+
+            simpleReportFiller.setReportFileName("3-person-details.jrxml");
+            simpleReportFiller.compileReport();
+
+
+            simpleReportFiller.setReportFileName("4-address.jrxml");
+            simpleReportFiller.compileReport();
+
+            simpleReportFiller.setReportFileName("5-other-details.jrxml");
+            simpleReportFiller.compileReport();
+
+            simpleReportFiller.setReportFileName("6-fatca-info.jrxml");
+            simpleReportFiller.compileReport();
+
+            simpleReportFiller.setReportFileName("7-certification.jrxml");
+            simpleReportFiller.compileReport();
+
+            simpleReportFiller.setReportFileName("DOBForm.jrxml");
         simpleReportFiller.compileReport();
 
         Map<String, Object> parameters = new HashMap<>();
         parameters.put("title", "Employee Report Example");
         parameters.put("lastName", "Kevin Pogi");
             parameters.put("testingParameter", "This is a string.");
-//        parameters.put("minSalary", 15000.0);
-//        parameters.put("condition", " LAST_NAME ='Smith' ORDER BY FIRST_NAME");
+            parameters.put("employee", employee);
 
 
             simpleReportFiller.setParameters(parameters);
@@ -40,14 +57,15 @@ public class App {
 
             simpleReportExporter.setJasperPrint(simpleReportFiller.getJasperPrint());
 
-            JasperExportManager.exportReportToPdfFile(simpleReportFiller.getJasperPrint(), "fromXml.pdf");
-            simpleReportExporter.exportToPdf("employeeRepor1t.pdf", "baeldung");
-            simpleReportExporter.exportToCsv("employeeReport.csv");
-            simpleReportExporter.exportToHtml("employeeReport.html");
+
+
+            JasperExportManager.exportReportToPdfFile(simpleReportFiller.getJasperPrint(), "sample.pdf");
+//            simpleReportExporter.exportToPdf("employeeRepor1t.pdf", "baeldung");
+//            simpleReportExporter.exportToCsv("employeeReport.csv");
+//            simpleReportExporter.exportToHtml("employeeReport.html");
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 
 
 
@@ -56,16 +74,5 @@ public class App {
 
 
 
-    }
-    public static List<Employee> employeeList(){
-        List<Employee> list = new ArrayList<>();
-
-
-        Employee kevin= new Employee();
-        kevin.setFirstName("Kevin");
-        kevin.setLastName("Fabian");
-        kevin.setSalary(10000.00);
-        kevin.setId(1l);
-        return list;
     }
 }

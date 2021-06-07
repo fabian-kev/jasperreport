@@ -1,0 +1,26 @@
+<?xml version = "1.0"?>
+
+<!DOCTYPE jasperTemplate PUBLIC "-//JasperReports//DTD Template//EN"
+  "http://jasperreports.sourceforge.net/dtds/jaspertemplate.dtd">
+
+<jasperTemplate>
+    <style name = "strong" isBold="true" pdfFontName = "Helvetica-Bold"></style>
+
+    <style name = "italic" isItalic="true" isBold="true" pdfFontName ="Helvetica-Oblique"></style>
+
+
+     <style name = "fc-green" forecolor="#4CAF50" pdfFontName = "Helvetica-Bold">
+        </style>
+
+      <style name = "styled-tf" style="fc-green" pdfFontName = "Helvetica-Bold">
+        </style>
+
+
+
+
+    <style name = "label" pdfFontName = "Helvetica-Bold">
+    </style>
+
+  <style name = "value">
+    </style>
+</jasperTemplate>

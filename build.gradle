@@ -10,9 +10,8 @@ repositories {
 }
 
 dependencies {
-
+//
     compile 'org.springframework:spring-context:5.1.9.RELEASE'
-//    compile 'net.sf.jasperreports:jasperreports:6.4.0'
     implementation group: 'net.sf.jasperreports', name: 'jasperreports', version: '6.17.0'
     implementation group: 'com.lowagie', name: 'itext', version: '2.1.7'
 

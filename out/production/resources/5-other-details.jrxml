@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="other-details"
+
+              leftMargin="0"
+              rightMargin="0">
+    <template>"styles.jrtx"</template>
+
+
+    <parameter name="employee" class="com.fabiankevin.jasper.Employee"></parameter>
+
+    <title>
+        <band height="150" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="500" height="20" style="styled-tf"/>
+                <textElement markup="styled">
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("Source(s) of Funds: <style pdfFontName = 'Helvetica'>Salary</style>")]]>
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="250" y="0" width="500" height="20" style="styled-tf"/>
+                <textElement markup="styled">
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("Estimated Montly Amount of Transaction (Credit): <style pdfFontName = 'Helvetica'>P 25,000</style>")]]>
+                </textFieldExpression>
+
+            </textField>
+
+
+            <!--            GENDER-->
+            <textField>
+                <reportElement x="0" y="20" width="500" height="20" style="styled-tf"/>
+                <textElement markup="styled">
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("Employment Type: <style pdfFontName = 'Helvetica'>Employed</style>")]]>
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="250" y="20" width="500" height="20" style="styled-tf"/>
+                <textElement markup="styled">
+                    <font isBold="true"/>
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("Nature of Business / Employment: <style pdfFontName = 'Helvetica'>Manufacturing</style>")]]>
+                </textFieldExpression>
+            </textField>
+
+            <!--            &lt;!&ndash;            PLACE OF BIRTH&ndash;&gt;\-->
+            <textField>
+                <reportElement x="0" y="40" width="500" height="20" style="styled-tf"/>
+                <textElement markup="styled">
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[( "Employer / Business Name <style pdfFontName = 'Helvetica'>Textile Manufacturing - Filipino Incorporated</style>")]]>
+                </textFieldExpression>
+            </textField>
+
+
+
+            <!--            mother's name-->
+
+
+            <textField>
+                <reportElement x="0" y="60" width="500" height="20" style="styled-tf"/>
+                <textElement markup="styled">
+                    <!--                    <font size = "22"/>-->
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("Occupation / Position: <style pdfFontName = 'Helvetica'>Manager</style>")]]>
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="250" y="60" width="500" height="20" style="styled-tf"/>
+                <textElement markup="styled">
+                    <!--                    <font size = "22"/>-->
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("Work/Business Phone Number: <style pdfFontName = 'Helvetica'>8811-9988</style>")]]>
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="0" y="80" width="500" height="20" style="styled-tf"/>
+                <textElement markup="styled">
+                    <!--                    <font size = "22"/>-->
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("Work / Business Address: <style pdfFontName = 'Helvetica'>45A Villar St., Bel-Air, Makati City 1234</style>")]]>
+                </textFieldExpression>
+            </textField>
+
+
+            <line>
+                <reportElement x="-5" y="100" width="635" height="0"/>
+            </line>
+        </band>
+    </title>
+</jasperReport>

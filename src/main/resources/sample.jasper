@@ -1,5 +1,0 @@
-<textFieldExpression class="java.lang.String">
-    <![CDATA[$P{ReportTitle}]]>
-</textFieldExpression>
-<anchorNameExpression><![CDATA["Title"]]>
-</anchorNameExpression>

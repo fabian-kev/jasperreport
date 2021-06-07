@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="account-details"
+              topMargin="0"
+              leftMargin="0"
+              rightMargin="0">
+    <template>"styles.jrtx"</template>
+
+
+    <background>
+        <band height="100" splitType="Stretch">
+            <textField>
+                <!--            background-->
+                <reportElement x="-5" y="0" width="635" height="60" backcolor="rgba(243, 229, 245, 0.3)" mode="Opaque"/>
+                <!--            background-->
+                <textElement>
+                </textElement>
+                <textFieldExpression>""</textFieldExpression>
+            </textField>
+
+
+            <textField>
+                <reportElement x="0" y="0" width="500" height="60" style="styled-tf"/>
+                <textElement markup="styled">
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[( "Branch / Unit: <style pdfFontName = 'Helvetica'></style>")]]>
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="250" y="0" width="100" height="20" style="styled-tf"/>
+                <textElement markup="styled">
+                    <!--                    <font size = "22"/>-->
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[( "Account Type <style pdfFontName = 'Helvetica'></style>")]]>
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="450" y="0" width="100" height="20" style="styled-tf"/>
+                <textElement markup="styled">
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[( "Date Opened (DOB) <style pdfFontName = 'Helvetica'></style>")]]>
+                </textFieldExpression>
+            </textField>
+
+            <line>
+                <reportElement x = "-5" y = "25" width = "635" height = "0"/>
+            </line>
+
+            <textField>
+                <reportElement  x="0" y="30" width="100" height="20" style="styled-tf"/>
+                <textElement markup="styled">
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[( "CIF No. <style pdfFontName = 'Helvetica'></style>")]]>
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="250" y="30" width="100" height="20" style="styled-tf"/>
+                <textElement markup="styled">
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[( "Account No. <style pdfFontName = 'Helvetica'></style>")]]>
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="450" y="30" width="120" height="20" style="styled-tf"/>
+                <textElement markup="styled">
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[( "Purpose Of Account Opening <style pdfFontName = 'Helvetica'></style>")]]>
+                </textFieldExpression>
+            </textField>
+
+
+        </band>
+    </background>
+</jasperReport>
