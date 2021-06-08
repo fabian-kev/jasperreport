@@ -12,8 +12,15 @@
      <style name = "fc-green" forecolor="#4CAF50" pdfFontName = "Helvetica-Bold">
         </style>
 
+
       <style name = "styled-tf" style="fc-green" pdfFontName = "Helvetica-Bold">
         </style>
+
+         <style name = "styled-tf-purple-plain" forecolor="#673AB7" pdfFontName = "Helvetica">
+                </style>
+
+         <style name = "styled-tf-purple" style="fc-green" pdfFontName = "Helvetica-Bold" forecolor="#673AB7">
+                </style>
 
 
 

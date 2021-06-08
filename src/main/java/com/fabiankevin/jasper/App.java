@@ -2,7 +2,8 @@ package com.fabiankevin.jasper;
 
 import net.sf.jasperreports.engine.JasperExportManager;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class App {
 
@@ -42,6 +43,21 @@ public class App {
             simpleReportFiller.setReportFileName("7-certification.jrxml");
             simpleReportFiller.compileReport();
 
+            simpleReportFiller.setReportFileName("8-accomplished.jrxml");
+            simpleReportFiller.compileReport();
+
+            simpleReportFiller.setReportFileName("9-customer-wet-signature.jrxml");
+            simpleReportFiller.compileReport();
+
+            simpleReportFiller.setReportFileName("10-ATM.jrxml");
+            simpleReportFiller.compileReport();
+
+
+            simpleReportFiller.setReportFileName("11-other-channel.jrxml");
+            simpleReportFiller.compileReport();
+            simpleReportFiller.setReportFileName("12-bank-use-only.jrxml");
+            simpleReportFiller.compileReport();
+
             simpleReportFiller.setReportFileName("DOBForm.jrxml");
         simpleReportFiller.compileReport();
 
@@ -57,7 +73,8 @@ public class App {
 
             simpleReportExporter.setJasperPrint(simpleReportFiller.getJasperPrint());
 
-
+//            HashMap<String, Object> params = new HashMap<String, Object>();
+//            params.put("logo", ClassLoader.getSystemResource("logo.jpg").getPath());
 
             JasperExportManager.exportReportToPdfFile(simpleReportFiller.getJasperPrint(), "sample.pdf");
 //            simpleReportExporter.exportToPdf("employeeRepor1t.pdf", "baeldung");

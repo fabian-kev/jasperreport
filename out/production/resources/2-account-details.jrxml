@@ -11,7 +11,7 @@
         <band height="100" splitType="Stretch">
             <textField>
                 <!--            background-->
-                <reportElement x="-5" y="0" width="635" height="60" backcolor="rgba(243, 229, 245, 0.3)" mode="Opaque"/>
+                <reportElement x="-5" y="0" width="635" height="50" backcolor="rgba(243, 229, 245, 0.5)" mode="Opaque"/>
                 <!--            background-->
                 <textElement>
                 </textElement>
@@ -52,7 +52,7 @@
             </line>
 
             <textField>
-                <reportElement  x="0" y="30" width="100" height="20" style="styled-tf"/>
+                <reportElement  x="0" y="25" width="100" height="20" style="styled-tf"/>
                 <textElement markup="styled">
                 </textElement>
                 <textFieldExpression class="java.lang.String">
@@ -61,7 +61,7 @@
             </textField>
 
             <textField>
-                <reportElement x="250" y="30" width="100" height="20" style="styled-tf"/>
+                <reportElement x="250" y="25" width="100" height="20" style="styled-tf"/>
                 <textElement markup="styled">
                 </textElement>
                 <textFieldExpression class="java.lang.String">
@@ -70,7 +70,7 @@
             </textField>
 
             <textField>
-                <reportElement x="450" y="30" width="120" height="20" style="styled-tf"/>
+                <reportElement x="450" y="25" width="120" height="20" style="styled-tf"/>
                 <textElement markup="styled">
                 </textElement>
                 <textFieldExpression class="java.lang.String">

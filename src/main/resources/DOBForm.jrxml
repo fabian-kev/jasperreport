@@ -4,11 +4,12 @@
               xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
               name="employeeReport"
               pageWidth="700"
-              pageHeight="1100"
+              pageHeight="1000"
               leftMargin="40"
               rightMargin="40"
               topMargin="10"
-              bottomMargin="20">
+              bottomMargin="0"
+                isIgnorePagination="true">
 
     <parameter name="title" isForPrompting="false"/>
     <parameter name="lastName"> </parameter>
@@ -16,10 +17,10 @@
     <parameter name="employee" class="com.fabiankevin.jasper.Employee"></parameter>
 
     <detail>
-        <band splitType="Stretch" height="700">
+        <band splitType="Stretch" height="901">
 
             <subreport>
-                <reportElement x="0" y="0" width="620" height="50"/>
+                <reportElement x="0" y="0" width="620" height="1"/>
                 <subreportParameter name="employee">
                     <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
                 </subreportParameter>
@@ -28,7 +29,7 @@
             </subreport>
 
             <subreport>
-                <reportElement x="0" y="60" width="620" height="50"/>
+                <reportElement x="0" y="60" width="620" height="1"/>
                 <subreportParameter name="employee">
                     <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
                 </subreportParameter>
@@ -39,7 +40,7 @@
 
 
             <subreport>
-                <reportElement x="0" y="100" width="620" height="50"/>
+                <reportElement x="0" y="90" width="620" height="1"/>
                 <subreportParameter name="employee">
                     <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
                 </subreportParameter>
@@ -49,7 +50,7 @@
             </subreport>
 
             <subreport>
-                <reportElement x="0" y="200" width="620" height="50"/>
+                <reportElement x="0" y="160" width="620" height="1"/>
                 <subreportParameter name="employee">
                     <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
                 </subreportParameter>
@@ -59,7 +60,7 @@
             </subreport>
 
             <subreport>
-                <reportElement x="0" y="280" width="620" height="50"/>
+                <reportElement x="0" y="215" width="620" height="1"/>
                 <subreportParameter name="employee">
                     <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
                 </subreportParameter>
@@ -69,7 +70,7 @@
             </subreport>
 
             <subreport>
-                <reportElement x="0" y="400" width="620" height="50"/>
+                <reportElement x="0" y="300" width="620" height="1"/>
                 <subreportParameter name="employee">
                     <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
                 </subreportParameter>
@@ -79,13 +80,61 @@
             </subreport>
 
             <subreport>
-                <reportElement x="0" y="480" width="620" height="50"/>
+                <reportElement x="0" y="360" width="620" height="1"/>
                 <subreportParameter name="employee">
                     <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
                 </subreportParameter>
 
                 <subreportExpression class="java.lang.String">
                     "7-certification.jasper"</subreportExpression>
+            </subreport>
+
+            <subreport>
+                <reportElement x="0" y="465" width="500" height="1"/>
+                <subreportParameter name="employee">
+                    <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
+                </subreportParameter>
+
+                <subreportExpression class="java.lang.String">
+                    "8-accomplished.jasper"</subreportExpression>
+            </subreport>
+
+            <subreport>
+                <reportElement x="0" y="630" width="500" height="1"/>
+                <subreportParameter name="employee">
+                    <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
+                </subreportParameter>
+
+                <subreportExpression class="java.lang.String">
+                    "9-customer-wet-signature.jasper"</subreportExpression>
+            </subreport>
+            <subreport>
+                <reportElement x="0" y="665" width="500" height="1"/>
+                <subreportParameter name="employee">
+                    <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
+                </subreportParameter>
+
+                <subreportExpression class="java.lang.String">
+                    "10-ATM.jasper"</subreportExpression>
+            </subreport>
+            <subreport>
+                <reportElement x="0" y="765" width="500" height="1"/>
+                <subreportParameter name="employee">
+                    <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
+                </subreportParameter>
+
+                <subreportExpression class="java.lang.String">
+                    "11-other-channel.jasper"</subreportExpression>
+            </subreport>
+
+            <subreport>
+                <reportElement x="0" y="900" width="500" height="1"/>
+                <subreportParameter name="employee">
+                    <subreportParameterExpression><![CDATA[$P{employee}]]></subreportParameterExpression>
+                </subreportParameter>
+
+                <subreportExpression class="java.lang.String">
+                    "12-bank-use-only.jasper"</subreportExpression>
             </subreport>
 
 

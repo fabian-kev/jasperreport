@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://jasperreports.sourceforge.net/jasperreports" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="customer-wet-signature"
+
+              leftMargin="0"
+              rightMargin="0">
+    <template>"styles.jrtx"</template>
+
+
+
+
+    <parameter name="employee" class="com.fabiankevin.jasper.Employee"></parameter>
+
+    <title>
+        <band height="50" splitType="Stretch">
+
+            <textField>
+                <reportElement x="0" y="0" width="625" height="20" style="styled-tf-purple-plain"/>
+                <textElement markup="styled" textAlignment="Center">
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("<style isUnderline='true'>Kevin Lopez De Jesus</style>")]]>
+                </textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="0" y="11" width="625" height="20" style="styled-tf-purple"/>
+                <textElement markup="styled" textAlignment="Center">
+                    <font size="8"></font>
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("<style>CUSTOMER SIGNATURE</style>")]]>
+                </textFieldExpression>
+            </textField>
+
+
+
+        </band>
+    </title>
+</jasperReport>

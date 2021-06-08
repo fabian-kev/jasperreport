@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://jasperreports.sourceforge.net/jasperreports" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="specimen-signature"
+
+              leftMargin="0"
+              rightMargin="0">
+    <template>"styles.jrtx"</template>
+
+
+
+
+    <parameter name="employee" class="com.fabiankevin.jasper.Employee"></parameter>
+
+    <title>
+        <band height="150" splitType="Stretch">
+
+            <textField>
+                <reportElement x="-5" y="20" width="410" height="15" style="styled-tf-purple" backcolor="rgba(0, 0, 0, 0.5)" mode="Opaque"/>
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+            <!--            background-->
+
+            <textField>
+                <reportElement x="0" y="20" width="385" height="15" style="styled-tf-purple"/>
+                <textElement markup="styled">
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("OTHER CHANNELS")]]>
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="0" y="35" width="385" height="15" style="styled-tf-purple"/>
+                <box leftPadding="5"></box>
+                <textElement markup="styled">
+                    <font size="9"></font>
+                </textElement>
+
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("1. Already Enrolled In Mobile Banking Through digital onboarding.")]]>
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="0" y="48" width="385" height="15" style="styled-tf-purple"/>
+                <box leftPadding="5"></box>
+                <textElement markup="styled">
+                    <font size="9"></font>
+                </textElement>
+
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("2. Do you want to enroll in Online Banking?")]]>
+                </textFieldExpression>
+            </textField>
+<!--        //yes no checkboxes-->
+            <rectangle>
+                <reportElement x="220" y="48" width="8" height="8" forecolor="#673AB7"></reportElement>
+            </rectangle>
+
+            <textField>
+                <reportElement x="233" y="47" width="625" height="15" style="styled-tf-purple-plain"/>
+                <textElement markup="styled">
+                    <font size="8"></font>
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("<style>Yes</style>")]]>
+                </textFieldExpression>
+            </textField>
+
+            <rectangle>
+                <reportElement x="260" y="48" width="8" height="8" forecolor="#673AB7"></reportElement>
+            </rectangle>
+
+            <textField>
+                <reportElement x="273" y="47" width="625" height="20" style="styled-tf-purple-plain"/>
+                <textElement markup="styled">
+                    <font size="8"></font>
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("<style>No</style>")]]>
+                </textFieldExpression>
+            </textField>
+
+
+
+            <textField>
+                <reportElement x="0" y="58" width="2000" height="40" style="styled-tf-purple-plain"/>
+                <box leftPadding="15"></box>
+                <textElement markup="styled" verticalAlignment="Justified">
+                    <font size="8" pdfFontName='Helvetica-Oblique'></font>
+                </textElement>
+
+                <textFieldExpression class="java.lang.String">
+                    <![CDATA[("<style pdfFontName='Helvetica-BoldOblique'>China Bank Online</style> account shall be created using the User IDs listed in order of preference. If the first Preferred\n User ID is unavailable, the Bank will enroll the next available User ID.\n <style pdfFontName = 'Helvetica-BoldOblique'>Preferred User IDs</style> (alphanumeric; 6-18 characters)")]]>
+                </textFieldExpression>
+            </textField>
+
+
+            <textField>
+                <reportElement x="35" y="95" width="375" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <bottomPen lineStyle="Dashed" lineWidth="0.25"></bottomPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+<!--            a row -->
+            <textField>
+                <reportElement x="0" y="95" width="360" height="15" style="styled-tf-purple-plain"/>
+                <box leftPadding="20"></box>
+                <textElement markup="styled">
+                    <font size="8" ></font>
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    "a"
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="60" y="95" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="110" y="95" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="160" y="95" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="210" y="95" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="260" y="95" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="310" y="95" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="360" y="95" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+            <!--            a row -->
+
+
+            <!--            b row -->
+
+            <textField>
+                <reportElement x="35" y="115" width="375" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <bottomPen lineStyle="Dashed" lineWidth="0.25"></bottomPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="0" y="115" width="360" height="15" style="styled-tf-purple-plain"/>
+                <box leftPadding="20"></box>
+                <textElement markup="styled">
+                    <font size="8" ></font>
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    "b"
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="60" y="115" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="110" y="115" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="160" y="115" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="210" y="115" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="260" y="115" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="310" y="115" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="360" y="115" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+            <!--            b row -->
+
+            <!--            c row -->
+
+            <textField>
+                <reportElement x="35" y="135" width="375" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <bottomPen lineStyle="Dashed" lineWidth="0.25"></bottomPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="0" y="135" width="360" height="15" style="styled-tf-purple-plain"/>
+                <box leftPadding="20"></box>
+                <textElement markup="styled">
+                    <font size="8" ></font>
+                </textElement>
+                <textFieldExpression class="java.lang.String">
+                    "c"
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="60" y="135" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="110" y="135" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="160" y="135" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="210" y="135" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="260" y="135" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="310" y="135" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="360" y="135" width="25" height="10" style="styled-tf-purple-plain"/>
+                <box>
+                    <leftPen lineStyle="Dashed" lineWidth="0.75"></leftPen>
+                    <rightPen lineStyle="Dashed" lineWidth="0.75"></rightPen>
+                </box>
+
+                <textFieldExpression class="java.lang.String">
+                    ""
+                </textFieldExpression>
+            </textField>
+            <!--            c row -->
+
+
+
+
+        </band>
+    </title>
+</jasperReport>
